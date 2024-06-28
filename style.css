@@ -1,0 +1,292 @@
+/* --------------------------------------------------Common Styles-------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Arizonia&family=Hurricane&family=Mr+Dafoe&family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,700;1,700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: "Red Hat Display", "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif;
+  background-color: hsl(0, 0%, 90%);
+  color: hsl(0, 0%, 15%);
+  font-size: 1rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* --------------------------------------------------End Common Styles-------------------------------------------------- */
+
+/* --------------------------------------------------Header-------------------------------------------------- */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: 80px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.25em;
+  z-index: 1;
+  background-color: #262626;
+  color: hsl(0, 0%, 90%);
+}
+header .title {
+  width: 20%;
+}
+header .title img {
+  width: 100%;
+  vertical-align: middle;
+}
+header nav ul {
+  display: flex;
+}
+header li {
+  position: relative;
+  list-style: none;
+  margin: 0 20px;
+  width: fit-content;
+}
+header a {
+  text-decoration: none;
+  color: #e6e6e6;
+}
+header li:after {
+  transition: 500ms;
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: hsl(0, 0%, 90%);
+}
+header li:hover::after {
+  width: 100%;
+}
+/* --------------------------------------------------End Header-------------------------------------------------- */
+
+/* --------------------------------------------------Main-------------------------------------------------- */
+main {
+  font-size: 1.25em;
+  padding: 80px 0px 0;
+  text-align: justify;
+}
+main h1 {
+  font-family: "Hurricane", cursive;
+  font-size: 2.25em;
+  letter-spacing: 0.01em;
+  text-align: center;
+  margin: 0 auto;
+  scroll-margin-top: 85px;
+}
+.background {
+  height: calc(100vh - 80px);
+  background: hsl(0, 0%, 85%);
+  position: sticky;
+  top: 80px;
+  padding-top: 10px;
+}
+.about,
+.review {
+  background: hsl(0, 0%, 90%);
+}
+/* --------------------------------------------------End Main-------------------------------------------------- */
+
+/* --------------------------------------------------Order Button-------------------------------------------------- */
+.ordernow {
+  width: fit-content;
+  margin: 5px auto 10px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 15%);
+}
+.ordernow a {
+  text-decoration: none;
+  color: hsl(0, 0%, 90%);
+}
+.ordernow:hover {
+  box-shadow: 2px 2px 5px 1px hsl(0, 0%, 15%);
+}
+/* --------------------------------------------------End Order Button-------------------------------------------------- */
+
+/* --------------------------------------------------Hero & Author Section-------------------------------------------------- */
+.area {
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.image {
+  width: 35%;
+}
+.image img {
+  width: 100%;
+  border-radius: 20px;
+}
+.description {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+}
+.description h4 {
+  margin-top: 10px;
+}
+.description p {
+  margin: 0px auto 10px;
+  text-indent: 2em;
+}
+.description li {
+  padding-left: 20px;
+  list-style: none;
+}
+blockquote {
+  width: fit-content;
+  margin: 10px auto;
+}
+/* --------------------------------------------------End Hero & Author Section-------------------------------------------------- */
+
+/* --------------------------------------------------About Section-------------------------------------------------- */
+.about .area ul {
+  width: 75%;
+  margin: auto;
+  list-style: url(./star.svg) outside;
+}
+.about .area ul li {
+  margin-bottom: 5px;
+}
+.about .area blockquote {
+  margin: 15px 200px;
+}
+/* --------------------------------------------------End About Section-------------------------------------------------- */
+
+/* --------------------------------------------------Review Section-------------------------------------------------- */
+.slider-wrapper {
+  position: relative;
+  max-width: 550px;
+  margin: 0 auto;
+  background: hsl(0, 0%, 85%);
+  border-radius: 20px;
+}
+.slider {
+  display: flex;
+  aspect-ratio: 1;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  border-radius: 20px;
+}
+.slider::-webkit-scrollbar {
+  height: 10px;
+}
+.slider::-webkit-scrollbar-thumb {
+  background-color: #262626;
+  border-radius: 10px;
+}
+.slider::-webkit-scrollbar-track {
+  background-color: #e6e6e6;
+  border-radius: 10px;
+}
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  padding-bottom: 10px;
+}
+/* --------------------------------------------------End Review Section-------------------------------------------------- */
+
+/* --------------------------------------------------Order Section-------------------------------------------------- */
+.order .area form {
+  width: 70%;
+  margin: auto;
+}
+input {
+  display: block;
+  width: 95%;
+  margin: 10px auto 20px;
+  padding: 10px 20px;
+  font-size: 0.95em;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 90%);
+  border-bottom: 2px solid hsl(0, 0%, 15%);
+  border-right: 2px solid hsl(0, 0%, 15%);
+  color: hsl(0, 0%, 15%);
+  box-shadow: -1px -1px 5px #666;
+}
+input:focus {
+  background-color: hsl(0, 0%, 93%);
+}
+/* --------------------------------------------------End Order Section-------------------------------------------------- */
+
+/* --------------------------------------------------Footer-------------------------------------------------- */
+.footer {
+  height: fit-content;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  background: hsl(0, 0%, 15%);
+  color: hsl(0, 0%, 90%);
+}
+footer h2 {
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+.newsletter {
+  width: 60%;
+}
+.subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+.subscribe input {
+  width: 80%;
+  margin: 0;
+  border-radius: 10px 0 0 10px;
+}
+.subscribe input::placeholder {
+  color: hsl(0, 0%, 25%);
+}
+.subscribe .ordernow {
+  background: hsl(0, 0%, 90%);
+  margin: 0;
+  padding: 8.25px 15px;
+  border-radius: 0 10px 10px 0;
+  align-self: start;
+}
+.subscribe .ordernow a {
+  color: #262626;
+  font-weight: bold;
+  text-decoration: none;
+}
+.subscribe .ordernow:hover {
+  box-shadow: 2px 2px 5px 1px hsl(0, 0%, 35%);
+}
+footer a {
+  text-decoration: none;
+  color: hsl(0, 0%, 90%);
+}
+.social > a {
+  margin: 5px;
+}
+.mail {
+  margin: 5px 0;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer i:hover {
+  transform: scale(1.2);
+}
+.copy {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0 20px;
+}
+/* --------------------------------------------------End Footer-------------------------------------------------- */
